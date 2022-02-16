@@ -1,7 +1,9 @@
 using Xunit;
+using System;
+using Parejas;
 using System.Collections.Generic;
 
-namespace Parejas
+namespace ParejasTest
 {
 
     public class SistemaTest
@@ -35,9 +37,9 @@ namespace Parejas
         public static IEnumerable<object[]> Data =>
         new List<object[]>
         {
-            new object[] { new Persona() , new Persona(), false},
-            // new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 26), false},
-            // new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 21), true},
+            new object[] { new Persona("gonzalo",30,"V") , new Persona("Marta",25,"M"), true},
+            new object[] { new Persona("andres",55 ,"V") , new Persona("Maria",45,"M"), true},
+            new object[] { new Persona("ricardo",20,"V") , new Persona("Pedro",21,"V"), false},
         };
 
     }
